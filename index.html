@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centro Educativo Taitabón</title>
+  <style>
+    :root {
+      --primary: #0a4c8a;
+      --secondary: #e63946;
+      --dark: #1f2937;
+      --light: #f4f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), #083b6b);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    nav a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: var(--secondary);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('padres_patria.jpg') center/cover no-repeat;
+      color: white;
+      padding: 140px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    section {
+      background: white;
+      padding: 50px 25px;
+      max-width: 1100px;
+      margin: 60px auto;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    section h2 {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--light);
+      padding: 30px 25px;
+      border-radius: 16px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: var(--secondary);
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Centro Educativo Taitabón</h1>
+  <p>Nivel Secundario · Formación académica y humana</p>
+</header>
+
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#oferta">Nivel Secundario</a>
+  <a href="#egresado">Perfil del Egresado</a>
+  <a href="#galeria">Galería</a>
+  <a href="#avisos">Avisos</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<div class="hero" id="inicio">
+  <h1>Bienvenidos a nuestra comunidad educativa</h1>
+  <p>Formando ciudadanos para el futuro</p>
+</div>
+
+<section id="nosotros">
+  <h2>¿Quiénes somos?</h2>
+  <p>
+    El Centro Educativo Taitabón es una institución comprometida con la formación integral de nuestros estudiantes,
+    promoviendo valores, conocimientos y habilidades para la vida.
+  </p>
+</section>
+
+<section id="oferta">
+  <h2>Nivel Secundario</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Primer Ciclo</h3>
+      <p>Desarrollo de competencias básicas, pensamiento crítico y hábitos de estudio.</p>
+    </div>
+    <div class="card">
+      <h3>Segundo Ciclo</h3>
+      <p>Preparación académica, orientación vocacional y formación en valores ciudadanos.</p>
+    </div>
+    <div class="card">
+      <h3>Áreas Académicas</h3>
+      <p>Lenguas, Matemáticas, Ciencias, Sociales, Educación Artística y Tecnología.</p>
+    </div>
+  </div>
+</section>
+
+<section id="egresado">
+  <h2>Perfil del Egresado</h2>
+  <div class="cards">
+    <div class="card"><p>Ciudadano responsable, ético y comprometido con su comunidad.</p></div>
+    <div class="card"><p>Capaz de comunicarse eficazmente y trabajar en equipo.</p></div>
+    <div class="card"><p>Preparado para estudios superiores y el mundo laboral.</p></div>
+  </div>
+</section>
+
+<section id="galeria">
+  <h2>Galería Institucional</h2>
+  <p style="text-align:center">Aquí puedes agregar las imágenes del centro.</p>
+</section>
+
+<section id="avisos">
+  <h2>Avisos y Noticias</h2>
+  <div class="cards">
+    <div class="card"><strong>Inicio del año escolar:</strong> Septiembre</div>
+    <div class="card"><strong>Inscripciones abiertas</strong></div>
+    <div class="card"><strong>Reunión de padres:</strong> Próximamente</div>
+  </div>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p><strong>Dirección:</strong> Comunidad de Taitabón, República Dominicana</p>
+  <p><strong>Teléfono:</strong> 809-753-1387</p>
+  <p><strong>Contacto:</strong> Gabriel Vargas</p>
+  <p><strong>Correo:</strong> info@taitabon.edu.do</p>
+</section>
+
+<footer>
+  <p>&copy; 2026 Centro Educativo Taitabón. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
